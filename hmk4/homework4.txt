@@ -1,1 +1,158 @@
+Question A
+git config --global user.name "Yusuf Candır"
+git config --global user.email "yusufcandir30@gmail.com"
+git config --global core.editor "nano"
+Question B
+$ ls -la
+total 13
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 ./
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 ../
+-rw-r--r-- 1 Yusuf 197609  21 Jan 11 17:18 HEAD
+-rw-r--r-- 1 Yusuf 197609 316 Jan 11 17:18 config
+-rw-r--r-- 1 Yusuf 197609  73 Jan 11 17:18 description
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 hooks/
+-rw-r--r-- 1 Yusuf 197609 182 Jan 11 17:18 index
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 info/
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 logs/
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 objects/
+-rw-r--r-- 1 Yusuf 197609 112 Jan 11 17:18 packed-refs
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:18 refs/
+
+Question C
+[Visit The Department of Software Engineering at Işık University](https://www.isikun.edu.tr/akademik/muhendislik-fakultesi/bolumler-ve-programlar/bilgisayar-muhendisligi/programlar/lisans-programi/yazilim-muhendisligi)
+Question D
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+Question D
+$ git log
+commit 8acda88beb801e95af6a2abbac10fe57d7ce8f6b (HEAD -> feature-1)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:37:58 2024 +0300
+
+    Satisfying requirement one
+
+commit e262bb932053fa03728ded16fed87953f97ff110 (main)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:29:11 2024 +0300
+
+    Setting up .gitignore
+
+commit 6d0bda28fb12bcee0a0193664a8e4669087b87cf (origin/main, origin/HEAD)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:06:10 2024 +0300
+
+    Create homework4.txt
+homework4.txt
+
+$ ls -la
+total 5
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:37 ./
+drwxr-xr-x 1 Yusuf 197609   0 Jan 11 17:36 ../
+-rw-r--r-- 1 Yusuf 197609 537 Jan 11 17:37 Main.java
+Question G,H,I,J
+$ git log
+commit 5de8524e6a58f1c459d298f2b055695b1979a912 (HEAD -> feature-2)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:47:37 2024 +0300
+
+    Satisfying requirement change two
+
+commit 8acda88beb801e95af6a2abbac10fe57d7ce8f6b (main, feature-3, feature-1)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:37:58 2024 +0300
+
+    Satisfying requirement one
+
+commit e262bb932053fa03728ded16fed87953f97ff110
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:29:11 2024 +0300
+
+    Setting up .gitignore
+
+commit 6d0bda28fb12bcee0a0193664a8e4669087b87cf (origin/main, origin/HEAD)
+Author: Yusuf Candır <yusufcandir30@gmail.com>
+Date:   Thu Jan 11 17:06:10 2024 +0300
+
+    Create homework4.txt
+Question K,L,M
+$ git diff main..feature-1
+diff --git a/hmk1/Main.java b/hmk1/Main.java
+index 1539f37..e2f5a22 100644
+--- a/hmk1/Main.java
++++ b/hmk1/Main.java
+@@ -10,13 +10,9 @@ public class Main {
+         System.out.println("Enter the second number:");
+         int num2 = scanner.nextInt();
+
+-
+-        System.out.println("The odd numbers between " + num1 + " and " + num2 + " are:");
++        System.out.println("The numbers between " + num1 + " and " + num2 + " are:");
+         for (int i = num1 + 1; i < num2; i++) {
+-            if (i % 2 != 0) {
+-
+-                System.out.println(i);
+-            }
++            System.out.println(i);
+         }
+     }
+ }
+
+$ git diff main..feature-2
+diff --git a/hmk1/Main.java b/hmk1/Main.java
+index 1539f37..4e9c4cc 100644
+--- a/hmk1/Main.java
++++ b/hmk1/Main.java
+@@ -10,11 +10,9 @@ public class Main {
+         System.out.println("Enter the second number:");
+         int num2 = scanner.nextInt();
+
+-
+         System.out.println("The odd numbers between " + num1 + " and " + num2 + " are:");
+         for (int i = num1 + 1; i < num2; i++) {
+             if (i % 2 != 0) {
+-
+                 System.out.println(i);
+             }
+         }
+
+$ git diff main..feature-3
+diff --git a/hmk1/Main.java b/hmk1/Main.java
+index 1539f37..111761d 100644
+--- a/hmk1/Main.java
++++ b/hmk1/Main.java
+@@ -10,11 +10,9 @@ public class Main {
+         System.out.println("Enter the second number:");
+         int num2 = scanner.nextInt();
+
+-
+-        System.out.println("The odd numbers between " + num1 + " and " + num2 + " are:");
++        System.out.println("The even numbers between " + num1 + " and " + num2 + " are:");
+         for (int i = num1 + 1; i < num2; i++) {
+-            if (i % 2 != 0) {
+-
++            if (i % 2 == 0) {
+                 System.out.println(i);
+             }
+         }
 
