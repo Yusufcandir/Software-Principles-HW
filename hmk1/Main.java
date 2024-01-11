@@ -10,9 +10,11 @@ public class Main {
         System.out.println("Enter the second number:");
         int num2 = scanner.nextInt();
 
-        System.out.println("The numbers between " + num1 + " and " + num2 + " are:");
+        System.out.println("The even numbers between " + num1 + " and " + num2 + " are:");
         for (int i = num1 + 1; i < num2; i++) {
-            System.out.println(i);
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
         }
     }
 }
